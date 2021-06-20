@@ -4,19 +4,19 @@ import android.graphics.Bitmap;
 
 public class Singleton {
 
-    private Bitmap chosenImage;
+    private Landmark selectedLandmark;
     private static Singleton singleton;
 
     private Singleton() {
 
     }
 
-    public Bitmap getChosenImage() {
-        return chosenImage;
+    public Landmark getSelectedLandmark() {
+        return selectedLandmark;
     }
 
-    public void setChosenImage(Bitmap chosenImage) {
-        this.chosenImage = chosenImage;
+    public void setChosenLandmark(Landmark selectedLandmark) {
+        this.selectedLandmark = selectedLandmark;
     }
 
     public static Singleton getInstance() {
