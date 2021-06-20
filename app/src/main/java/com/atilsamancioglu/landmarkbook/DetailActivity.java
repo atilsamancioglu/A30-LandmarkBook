@@ -27,7 +27,6 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(view);
 
 
-        //Intent intent = getIntent();
         //Landmark selectedLandmark = (Landmark) intent.getSerializableExtra("landmark");
 
         Singleton singleton = Singleton.getInstance();

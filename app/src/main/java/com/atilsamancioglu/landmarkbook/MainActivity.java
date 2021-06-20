@@ -15,6 +15,7 @@ import android.widget.ListView;
 import com.atilsamancioglu.landmarkbook.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         LandmarkAdapter landmarkAdapter = new LandmarkAdapter(landmarkArrayList);
         binding.recyclerView.setAdapter(landmarkAdapter);
 
+
+
         /*
         //Not Efficient
         Bitmap pisa = BitmapFactory.decodeResource(getApplicationContext().getResources(),R.drawable.pisa);
@@ -64,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         /*
         //ListView
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this,android.R.layout.simple_list_item_1,landmarkNames);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this,android.R.layout.simple_list_item_1,landmarkArrayList.stream().map(landmark-> landmark.name).collect(Collectors.toList()));
 
         binding.listView.setAdapter(arrayAdapter);
 
@@ -83,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
          */
-
 
     }
 }
