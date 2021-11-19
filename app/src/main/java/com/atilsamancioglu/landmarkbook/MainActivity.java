@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-
+//setContentView ile onCreate arasındaki herşey kopyala
+//yapıştır yaptı.Bunlari developer.android.com dan aldi
+//ViewBinding için yazılır Ezberleme!
 
         //Data
 
